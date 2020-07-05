@@ -1,3 +1,4 @@
+import setGPU
 import utils
 import dnn_helper
 import os
