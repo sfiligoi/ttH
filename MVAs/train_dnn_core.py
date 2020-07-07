@@ -1,15 +1,13 @@
-import setGPU
 import utils
 import dnn_helper
 import os
-#print("GPU with lowest memory %s" % str(utils.pick_gpu_lowest_memory()))
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
-#os.environ["CUDA_VISIBLE_DEVICES"] = str(utils.pick_gpu_lowest_memory())
 import tensorflow as tf
 print(tf.__version__)
 #config = tf.ConfigProto(log_device_placement=True)
 #config.gpu_options.allow_growth = True
 #session = tf.Session(config=config)
+
+print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 
 #print(session)
 
