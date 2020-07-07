@@ -142,7 +142,7 @@ class DNN_Helper:
     else:
       self.predictions["final_fit"] = self.model.predict(self.features_final_fit.features, self.batch_size).flatten()
       for i in range(len(self.features_final_fit.global_features)):
-          print "DNN Score %d: %.6f" % (i, self.predictions["final_fit"][i])
+          print("DNN Score %d: %.6f" % (i, self.predictions["final_fit"][i]))
     return [self.predictions["train"], self.predictions["validation"], self.predictions["data"], self.predictions["final_fit"]]
 
   def train(self, n_epochs, n_batch):
